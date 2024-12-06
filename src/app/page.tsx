@@ -11,7 +11,7 @@ export default function Home() {
         alt="캐릭터 검색"
         style={{ width: "50%", marginTop: "2rem" }}
       />
-      <Link href="/charater">
+      <Link href="/character">
         <button className={styles.button}>캐릭터 검색</button>
       </Link>
     </div>
