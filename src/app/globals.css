@@ -5,17 +5,29 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary: #1E90FF;
+  --color-secondary: #4682B4;
+  --color-accent: #00BFFF;
+  --color-light: #87CEFA;
+  --color-dark: #4169E1;
+
+  --color-light: #00D6FA;
+  --color-dark: #1288F8;
+  --color-black: #2B2B2B;
+  --color-white: #FFFFFF;
+  --color-grey: #2A425B;
+  --color-gray: #2A425B;
+  --color-sub: #7CD0FF;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    
   }
-}
+} */
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
