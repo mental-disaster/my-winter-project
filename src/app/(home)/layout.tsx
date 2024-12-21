@@ -1,28 +1,31 @@
 import Link from "next/link";
-import "../globals.css";
-import styles from '../Home.module.css';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-        <header className={styles.header}>
-            <h1>던담 클론</h1>
-            <nav className={styles.nav}>
-                <ul>
-                    <li><Link href="/" className={styles.navLink}>홈</Link></li>
-                    <li><Link href="/character" className={styles.navLink}>캐릭터 검색</Link></li>
-                    <li><Link href="/ranking" className={styles.navLink}>랭킹</Link></li>
-                    <li><Link href="/help" className={styles.navLink}>도움말</Link></li>
+        <header className="navbar">
+            <div className="navbar-start">
+                <h1>던담 클론</h1>
+            </div>
+            <div className="navbar-center">
+                <ul className="menu menu-horizontal">
+                    <li><Link href="/">홈</Link></li>
+                    <li><Link href="/character">캐릭터 검색</Link></li>
+                    <li><Link href="/ranking">랭킹</Link></li>
+                    <li><Link href="/help">도움말</Link></li>
                 </ul>
-            </nav>
+            </div>
+            <div className="navbar-end"></div>
         </header>
 
-        <main className={styles.main}>
+        <main className="flex-grow">
             {children}
         </main>
 
-        <footer className={styles.footer}>
-            <p>던담 클론</p>
+        <footer className="footer footer-center text-base-content">
+            <aside>
+                <p>던담 클론</p>
+            </aside>
         </footer>
     </>
   );
