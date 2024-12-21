@@ -28,6 +28,21 @@
   }
 } */
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: 'GCT';
+  src: url('/fonts/GCT_Light.ttf') format('truetype');
+  font-weight: normal, 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GCT';
+  src: url('/fonts/GCT_Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GCT';
+  src: url('/fonts/GCT_Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
