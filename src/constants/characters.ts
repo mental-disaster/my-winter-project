@@ -38,4 +38,4 @@ export const CHARACTERS: Character[] = [
     { id: 35, name: '폴', img: null},
     { id: 36, name: '헤이하치', img: null},
     { id: 37, name: '화랑', img: null},
-]
+] as const;
