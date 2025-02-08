@@ -5,14 +5,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
         <header className="navbar">
             <div className="navbar-start">
-                <h1>헤더</h1>
+                <h1>던담 클론</h1>
             </div>
             <div className="navbar-center">
                 <ul className="menu menu-horizontal">
                     <li><Link href="/">홈</Link></li>
-                    <li><Link href="/">홈</Link></li>
-                    <li><Link href="/">홈</Link></li>
-                    <li><Link href="/">홈</Link></li>
+                    <li><Link href="/character">캐릭터 검색</Link></li>
+                    <li><Link href="/ranking">랭킹</Link></li>
+                    <li><Link href="/help">도움말</Link></li>
                 </ul>
             </div>
             <div className="navbar-end"></div>
@@ -24,7 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
         <footer className="footer footer-center text-base-content">
             <aside>
-                <p>푸터</p>
+                <p>던담 클론</p>
             </aside>
         </footer>
     </>

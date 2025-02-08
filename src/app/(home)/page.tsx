@@ -1,22 +1,28 @@
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+import { CHARACTERS } from "@/constants/characters";
+import { useState } from "react";
 
-export default function Page() {
+
+export default function CharacterSelect() {
+  const [selected, setSelected] = useState<number | null>(null);
+
   return (
-    <div className='my-4'>
-      <h2 className='text-2xl'>던파 캐릭터 정보를 확인하세요</h2>
-      <div className='flex justify-center my-4'>
-        <Image
-          width={100}
-          height={100}
-          src="/next.svg"
-          alt="캐릭터 검색"
-        />
-      </div>
-      <div className='flex justify-center'>
-        <Link href="/character">
-          <button className='btn btn-primary'>캐릭터 검색</button>
-        </Link>
+    <div className="flex flex-col items-center p-4">
+      <h1 className="text-3xl font-bold base-content mb-4">Character Select</h1>
+      <div className="grid grid-cols-11 gap-2 p-4 rounded-lg">
+        {CHARACTERS.map((char, index) => (
+          <button
+            key={index}
+            onClick={() => setSelected(selected !== index ? index : null)}
+            className={`
+                w-20 h-20 flex items-center justify-center border-2 rounded-lg base-content font-bold transition-all
+                hover:border-primary
+                ${selected === index ? "border-accent bg-accent bg-opacity-50" : "border-transparent"}
+                `}
+            >
+            {char.name}
+          </button>
+        ))}
       </div>
     </div>
   );
